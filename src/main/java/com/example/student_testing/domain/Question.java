@@ -25,6 +25,11 @@ public class Question extends ValueObject {
         return false;
     }
 
+    public boolean isCorrectAnswer(int numOfAnswer) {
+        int index = numOfAnswer - 1;
+        return correctAnswerIndex == index;
+    }
+
     private void setAnswerOptions(LinkedHashSet<String> answerOptions) {
         if ((long) answerOptions.size() != 4)
             throw new IllegalArgumentException("The number of answer options must be 4");

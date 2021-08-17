@@ -7,18 +7,17 @@ import com.example.student_testing.domain.TestId;
 import com.example.student_testing.domain.TestRepository;
 import org.springframework.stereotype.Component;
 import java.time.LocalDateTime;
-import java.util.Arrays;
 import java.util.LinkedHashSet;
 
 public class CreateTest implements Command<TestId> {
 
-    private String name;
+    private final String name;
 
-    private String description;
+    private final String description;
 
-    private LinkedHashSet<Question> questions;
+    private final LinkedHashSet<Question> questions;
 
-    private int hoursToEnd;
+    private final int hoursToEnd;
 
     public CreateTest(String name, String description, LinkedHashSet<Question> questions, int hoursToEnd) {
         this.name = name;

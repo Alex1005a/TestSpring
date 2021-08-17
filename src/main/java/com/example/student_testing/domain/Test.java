@@ -7,9 +7,6 @@ import java.util.Collections;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
-//@Component
-//@Scope(value = ConfigurableBeanFactory.SCOPE_SINGLETON)
-
 public class Test extends AggregateRoot<TestId> {
 
     private String name;
